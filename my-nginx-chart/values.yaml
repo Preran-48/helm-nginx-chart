@@ -1,0 +1,19 @@
+# Number of application replicas
+replicaCount: 1
+
+# Container image configuration
+image:
+  repository: nginx
+  tag: "1.31.2"
+  pullPolicy: IfNotPresent
+
+# Kubernetes Service configuration
+service:
+  type: ClusterIP
+  port: 80
+
+# Ingress configuration
+ingress:
+  enabled: false
+  className: nginx
+  host: myapp.local
